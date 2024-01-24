@@ -12,6 +12,14 @@
     
 
     <dependencies>
-        
+        <dependency>
+            <groupId>org.example.demo</groupId>
+            <artifactId>demo-commons</artifactId>
+            <version>${revision}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.knuddels</groupId>
+            <artifactId>jtokkit</artifactId>
+        </dependency>
     </dependencies>
 </project>
