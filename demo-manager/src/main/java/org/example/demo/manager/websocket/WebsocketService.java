@@ -113,7 +113,7 @@ public class WebsocketService implements InitializingBean {
                     openAIResponse = WebSocketContext.getContext().getBean(ChatClient.class).toBashChat(parameters);
                     authRequest.setMsg(openAIResponse.getChoicesMessageContent());
                 }
-                messageHandler.execute(session, (Message) authRequest);
+                messageHandler.execute(session, authRequest);
             } catch (Exception e) {
                 CloseReason closeReason = new CloseReason(CloseReason.CloseCodes.getCloseCode(1006),"Model exception!");
                 this.onClose(session, closeReason);

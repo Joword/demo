@@ -1,6 +1,7 @@
 package org.example.demo.manager.model;
 
-import com.bgi.aigi.manager.api.Message;
+
+import org.example.demo.manager.api.Message;
 
 /**
  * @author Joword
