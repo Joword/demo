@@ -14,6 +14,11 @@
     
     <dependencies>
         <dependency>
+            <groupId>org.example.demo</groupId>
+            <artifactId>demo-dao</artifactId>
+            <version>${revision}</version>
+        </dependency>
+        <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
         </dependency>

@@ -2,24 +2,24 @@ package org.example.demo.manager.websocket;
 
 import com.alibaba.fastjson.JSONObject;
 import lombok.extern.slf4j.Slf4j;
-import org.example.demo.llm.client.ChatClient;
 import org.example.demo.llm.conversation.OpenAIResponse;
 import org.example.demo.llm.model.Parameters;
-import org.example.demo.llm.prompt.Prompt;
 import org.example.demo.llm.utils.OpenAIUtils;
 import org.example.demo.manager.api.Message;
+import org.example.demo.manager.api.MessageHandler;
 import org.example.demo.manager.config.WebSocketContext;
 import org.example.demo.manager.model.AuthRequest;
 import org.example.demo.manager.model.Response;
 import org.example.demo.manager.utils.ServerEncoder;
 import org.example.demo.manager.utils.WebSocketUtils;
+import org.example.demo.llm.client.ChatClient;
+import org.example.demo.llm.prompt.Prompt;
 import org.springframework.aop.framework.AopProxyUtils;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.CollectionUtils;
-import org.example.demo.manager.api.MessageHandler;
 
 import javax.websocket.*;
 import javax.websocket.server.ServerEndpoint;
