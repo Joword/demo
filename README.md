@@ -1,2 +1,2 @@
-# demo
-full-stack demo
+# springcloud demo for supply chain
+
