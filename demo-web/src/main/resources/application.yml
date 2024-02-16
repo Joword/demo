@@ -1,0 +1,58 @@
+spring:
+  application:
+    name: demo-web
+    prefix: ""
+  profiles:
+    active: dev
+
+server:
+  port: 8089
+  base-path: ""
+  white-list:
+    list:
+      - "/"
+      - "${server.base-path}/home/index"
+
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+#暴露actuator的所有端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  #health endpoint是否必须显示全部细节。默认情况下, /actuator/health 是公开的，并且不显示细节
+  endpoint:
+    health:
+      show-details: ALWAYS
+
+feign:
+  okhttp:
+    enabled: true
+  httpclient:
+    enabled: false
+  hystrix:
+    enabled: false
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 10000
+
+#ribbon的超时时间
+ribbon:
+  ReadTimeout: 30000
+  ConnectTimeout: 30000
+
+
+
+
+
+
+

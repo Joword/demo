@@ -3,16 +3,6 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.7.12</version>
-        <relativePath />
-    </parent>
-    <modules>
-        <module>demo-common</module>
-        <module>demo-dependency</module>
-    </modules>
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.example.demo</groupId>
     <artifactId>demo</artifactId>
@@ -20,11 +10,29 @@
     <packaging>pom</packaging>
     <description>springcloud project</description>
 
+    <modules>
+        <module>demo-common</module>
+        <module>demo-dependency</module>
+        <module>demo-service</module>
+        <module>demo-dao</module>
+        <module>demo-manager</module>
+        <module>demo-web</module>
+        <module>demo-llm</module>
+    </modules>
+
     <properties>
         <revision>1.0-SNAPSHOT</revision>
-        <java.version>1.8</java.version>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
-
+    
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.example.demo</groupId>
+                <artifactId>demo-dependency</artifactId>
+                <version>${revision}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 </project>
