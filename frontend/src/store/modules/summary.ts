@@ -1,0 +1,66 @@
+import { defineStore } from "pinia";
+
+
+export const useSummary = defineStore("summary", {
+    persist: {
+        key: 'summaryInfo',
+        storage: sessionStorage,
+        paths: ['info', 'classify', 'paper', 'clinvar', 'criteriaTest', 'showData', 'showTabs']
+    },
+    state: () => {
+        return {
+            summaryEvent: { boxShadow:'#578CC9', name:'info', status:false, boxShadowShow:'', show:'Basic information' },
+            showTabs: { info:'Basic information', classification:'Classification', clinvar: 'Clinical evidence', omim: 'Related phenotype', gnomAD: 'Population frequency', swp: 'Software predication',article:'Article interpretation' },
+            showData: { name: '', value: '', color: '', backgroundColor: '', index: [''], content: [''], extraLink: null, focused: false },
+            info: { name: 'info', value: 'Basic information', color: '#628DBF', focused: true, content: [ 'SLC26A4', '7-107315505-T-A', 'NM_000441.2:c.716T>A', 'NP_000432.1:p.Val239Asp (V239D)'], index: ['Gene: ','VariantID: ','cHGVS: ','pHGVS: '] },
+            classify: { name: 'classification', value: 'ACMG classification', focused: false, color: '#C23E3E', index: ['Pathogenic'], content:[''] },
+            paper: { name: 'paper',value: 'Reference', color: '' },
+            clinvar: { name: 'clinvar', value: 'Clinical evidence', color: '#6C5C91', focused: false, content:[ 'Pathogenic', '4', '43566','Pendred Syndrome' ], index: [ 'Clinical significance: ', 'Review status: ', 'Variantion ID: ','Phenotype: ' ], extraLink: ['43566'] },
+            omim: { name: 'omim', value: 'Related phenotype', color: '#3EC2B9', focused: false, index: [''], content: [''] },
+            gnomAD: { name: 'gnomAD', value: 'Population frequency', color: '#A4B581', focused: false, index: ['Exomes allele frequency: ', 'Genomes allele frequency: ', 'Popmax filtering AF: ', 'gnomAD'], content: ['0.0002028', '0.0002028', '0.001301', ' '], extraLink: ['gnomAD'] },
+            swp: { name: 'swp', value: 'Softwares prediction', color: '#A38522', focused: false, index: ['REVEL', 'MutPred2', 'VEST', 'MLVP'], content: ['','','','',''] },
+            article: { name: 'article', value: 'Article interpretation', color: '#137871', focused: false, index: ['PMID: '], content: ['16460646、25394566'] },
+            strengthMap: { verystrong:'VeryStrong', strong:'Strong', moderate:'Moderate', supporting:'Supporting', unmet:'Unmet', unset:'Unset' },
+            colorMap: { verystrong:"", strong:"#DB5353", moderate:"", supporting:"", unmet:"", unset:"" },
+            criteriaInfo: {metCriteria: true, articleEvidence: false},
+            pathogenicPalette: {p: '#D43030', lp: '#FF8D1A', vus: '#808080', lb: '#A5D63F', b: '#12990F'},
+            criteriaPalette: { pv: '#942222', ps: '#D43030', pm: '#FF8D1A', pp: '#FFC300', bv: '#0C6B0B', bs: '#12990F', bm: '#43CF7C', bp: '#A5D63F', unmet:'#C4C0C0' },
+            addPmidInformation: { pmid: '', title: '', journal: '', journalAbbr: '', year: '', author: '' },
+            diseaseLabel: { color: '#f1ca17', uncheckLabel: 'Disease', checkLabel:'Disease' },
+            geneLabel: { color: '#983680', uncheckLabel: 'Gene', checkLabel:'Gene' },
+            mutationLabel: { color: '#57c3c2', uncheckLabel: 'Mutation', checkLabel:'Mutation' },
+            infoFormat: { name:'', words:'CLN6(NM_017882.3):c.679G>A:&nbsp;in RefSeq transcript NM_017882.3(gene CLN6) position 679 the reference sequence is C and the sequence for a carrier of this allele is T.<br />p.Glu227Lys:&nbsp;in the corresponding protein, in amino acid 227 the reference sequence is a Glutamic acid and a carrier of this allele has a Lysine<br />The transcript variant is different from the genomic variant because the transcript is on the negative strand.' },
+            evidences: {  },
+            diseaseWords: { color: "#f1ca17",words: ['Pendred syndrome', 'sensorineural hearing loss'] },
+            geneWords: { color: "#983680", words:['SLC26A4'] },
+            mutationWords: { color: "#57c3c2" ,words: ['V239D','716T>A'] },
+            criteriaTest: { name: 'PM3', tips:'test', strengh:'Strong', color:'#ee3f4d' },
+            criteriaTest1: { name: 'PP1', tips:'test', strengh:'Supporting', color:'#fba414' },
+            criteriaTest2: { name: 'BS3', tips:'test', strengh:'Strong', color:'#1ba784' },
+            criteriaTest3: { name: 'PM2', tips:'test', strengh:'Moderate', color:'#fccb16' },
+            criteriaTest4: { name: 'BS1', tips:'test', strengh:'Unmet', color:'#A6A6A6' },
+            criteriaTest5: { name: 'BS2', tips:'test', strengh:'Unmet', color:'#A6A6A6' },
+            criteriaTest6: { name: 'BA1', tips:'test', strengh:'Unmet', color:'#A6A6A6' },
+            criteriaTest7: { name: 'PVS1', tips:'test', strengh:'VeryStrong', color:'#d11a2d' },
+            criteriaTest8: { name: 'PM1', tips:'test', strengh:'Unmet', color:'#A6A6A6' },
+            criteriaTest9: { name: 'PP3', tips:'test', strengh:'Supporting', color:'#fccb16' },
+            criteriaTest10: { name: 'BP4', tips:'test', strengh:'Supporting', color:'#A6A6A6' },
+            criteriaTest11: { name: 'PM4', tips:'test', strengh:'Unmet', color:'#A6A6A6' },
+            criteriaTest12: { name: 'BP3', tips:'test', strengh:'Unmet', color:'#A6A6A6' },
+            criteriaTest13: { name: 'BP7', tips:'test', strengh:'Unmet', color:'#A6A6A6' },
+            criteriaTest14: { name: 'PS1', tips:'test', strengh:'Supporting', color:'#fba414' },
+            criteriaTest15: { name: 'PM5', tips:'test', strengh:'Moderate', color:'#fccb16' },
+            criteriaTest16: { name: 'BP2', tips:'test', strengh:'Unmet', color:'#A6A6A6' },
+            criteriaTest17: { name: 'PS2', tips:'test', strengh:'Unmet', color:'#A6A6A6' },
+            criteriaTest18: { name: 'PM6', tips:'test', strengh:'Unmet', color:'#A6A6A6' },
+            criteriaTest19: { name: 'PP4', tips:'test', strengh:'Unmet', color:'#A6A6A6' },
+            criteriaTest20: { name: 'BP5', tips:'test', strengh:'Unmet', color:'#A6A6A6' },
+            criteriaTest21: { name: 'PP1', tips:'test', strengh:'Unmet', color:'#A6A6A6' },
+            criteriaTest22: { name: 'BS4', tips:'test', strengh:'Unmet', color:'#A6A6A6' },
+            criteriaTest23: { name: 'PS4', tips:'test', strengh:'Unmet', color:'#A6A6A6' },
+            criteriaTest24: { name: 'PS3', tips:'test', strengh:'Unmet', color:'#A6A6A6' },
+        }
+    },
+    actions: {
+    }
+})

@@ -1,0 +1,11 @@
+version: '1'
+
+services:
+  aigipython:
+    image: aigi_python_image
+    container_name: "aigiPython"
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - 0.0.0.0:9670:9670
