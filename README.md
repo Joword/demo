@@ -7,3 +7,6 @@
 
 ## Fastapi_vue
 概述：后端使用Python3.11+Fastapi+tortoise+mongodb，前端使用Vite+Vue3
+
+## Goyang_vue
+概述：后端使用Goyang+Gin+Gorm，前端使用Vite+Vue3(待续...)
