@@ -1,0 +1,19 @@
+enum ApiUrl {
+	Register = "/auth/register",
+	Login = "/auth/login",
+	Logout = "/auth/logout",
+	UserInfo = "/user/me",
+	UserList = "/user",
+	Conversation = "/conversation",
+	ServerStatus = "/status",
+	SystemInfo = '/system/info',
+	SystemRequestStatistics = '/system/request_statistics',
+	ProxyLogs = '/system/proxy_logs',
+	ServerLogs = '/system/server_logs',
+	emailSend = "/sendmail",
+	Authorization = "/user",
+	UserInfoSingle = "/user_search",
+	forgetPassword = "/user/forget_password",
+	resetPassword = "/user/reset_password"
+}
+export default ApiUrl;
