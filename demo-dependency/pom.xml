@@ -21,6 +21,10 @@
         <spring.boot.actuator.version>2.4.4</spring.boot.actuator.version>
         <jedis.version>3.3.0</jedis.version>
         <slf4j.version>2.0.11</slf4j.version>
+        <commons.lang3.version>3.12.0</commons.lang3.version>
+        <http.client.version>4.5.14</http.client.version>
+        <springfox.version>3.0.0</springfox.version>
+        <bcprov.jdk15on.version>1.69</bcprov.jdk15on.version>
     </properties>
     
     <dependencyManagement>
@@ -91,6 +95,28 @@
                 <artifactId>slf4j-api</artifactId>
                 <version>${slf4j.version}</version>
             </dependency>
+            <!--swagger-->
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-boot-starter</artifactId>
+                <version>${springfox.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger-ui</artifactId>
+                <version>${springfox.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger-common</artifactId>
+                <version>${springfox.version}</version>
+            </dependency>
+            <!--database-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-data-redis</artifactId>
+                <version>${spring.boot.version}</version>
+            </dependency>
             <!--工具类-->
             <dependency>
                 <groupId>org.projectlombok</groupId>
@@ -101,6 +127,21 @@
                 <groupId>redis.clients</groupId>
                 <artifactId>jedis</artifactId>
                 <version>${jedis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons.lang3.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpclient</artifactId>
+                <version>${http.client.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bouncycastle</groupId>
+                <artifactId>bcprov-jdk15on</artifactId>
+                <version>${bcprov.jdk15on.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
