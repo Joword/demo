@@ -1,9 +1,4 @@
 import { createRouter, createWebHistory } from "vue-router";
-import VariantView from '@/views/VariantView.vue';
-// import ChatView from '@/views/ChatView.vue'
-import { checkLogin } from "@/api/request";
-import { Message } from '@/utils/utils';
-// import { useLoadingBar } from "naive-ui";
 
 const routers = [
     {
