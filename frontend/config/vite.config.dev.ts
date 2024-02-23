@@ -9,8 +9,7 @@ export default mergeConfig({
 		fs: {strict: true},
 		proxy: {
 			'/test': {
-                // target: 'http://172.19.205.15:9570',
-                target: 'http://172.19.205.21:9570',
+                target: 'http://xx.xx.xx.xx:xxxx',
 				changeOrigin: true,
                 logLevel: 'debug',
 				ws: true,
@@ -20,6 +19,6 @@ export default mergeConfig({
 	},
 	define: {
 		"import.meta.env.VITE_API_PROTOCOL": "'auto'",
-        "import.meta.env.HOST_URL": "'http://172.16.56.33:9570/test'"
+        "import.meta.env.HOST_URL": "'http://xx.xx.xx.xx:xxxx/test'"
 	},
 }, baseConfig)

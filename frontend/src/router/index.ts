@@ -37,22 +37,6 @@ const routers = [
         component: () => import('@/components/submodules/login.vue'),
     },
     {
-        path: '/variant/:variantId',
-        name: 'variant',
-        component: VariantView,
-        // meta: {
-        //     requireAuth: true,
-        //     roles: ['user', 'admin']
-        // }
-    },{
-        path: '/paper',
-        name: 'paper',
-        component: import('@/views/ChatView.vue'),
-        // meta: {
-        //     requireAuth: true,
-        //     roles: ['user', 'admin']
-        // }
-    },{
         path: '/about',
         name: 'about',
         component: () => import('@/views/AboutView.vue'),
@@ -68,18 +52,6 @@ const routers = [
         //     requireAuth: true,
         //     roles: ['user', 'admin']
         // }
-    },{
-        path: '/gene/:gene',
-        name: 'gene',
-        component: () => import('@/views/GeneView.vue'),
-    },{
-        path: '/pmid/:pmid',
-        name: 'pmid',
-        component: () => import('@/views/PmidView.vue')
-    }, {
-        path: '/manager',
-        name: 'manager',
-        component: () => import('@/components/manager.vue')
     }
 ];
 
