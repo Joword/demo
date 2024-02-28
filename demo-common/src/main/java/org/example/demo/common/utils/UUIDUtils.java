@@ -1,5 +1,7 @@
 package org.example.demo.common.utils;
 
+import java.util.UUID;
+
 /**
  * @author Joword
  * @date: 2024/2/16 19:08
@@ -7,4 +9,9 @@ package org.example.demo.common.utils;
  * @description: uuid utils
  */
 public class UUIDUtils {
+    
+    public static String getUUID(){
+        return UUID.randomUUID().toString().replace("-","");
+    }
+    
 }

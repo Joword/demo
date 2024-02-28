@@ -25,6 +25,10 @@
         <http.client.version>4.5.14</http.client.version>
         <springfox.version>3.0.0</springfox.version>
         <bcprov.jdk15on.version>1.69</bcprov.jdk15on.version>
+        <persistence.api.version>1.0.2</persistence.api.version>
+        <mybatis.plus.version>3.4.3.1</mybatis.plus.version>
+        <spring.boot.actuator.version>2.4.4</spring.boot.actuator.version>
+        <fastjson.version>1.2.83</fastjson.version>
     </properties>
     
     <dependencyManagement>
@@ -60,7 +64,7 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-actuator</artifactId>
-                <version>${spring.boot.version}</version>
+                <version>${spring.boot.actuator.version}</version>
                 <exclusions>
                     <exclusion>
                         <groupId>org.springframework.boot</groupId>
@@ -117,6 +121,12 @@
                 <artifactId>spring-boot-starter-data-redis</artifactId>
                 <version>${spring.boot.version}</version>
             </dependency>
+            <!--Mybatis plus-->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis.plus.version}</version>
+            </dependency>
             <!--工具类-->
             <dependency>
                 <groupId>org.projectlombok</groupId>
@@ -142,6 +152,16 @@
                 <groupId>org.bouncycastle</groupId>
                 <artifactId>bcprov-jdk15on</artifactId>
                 <version>${bcprov.jdk15on.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>javax.persistence</groupId>
+                <artifactId>persistence-api</artifactId>
+                <version>${persistence.api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
