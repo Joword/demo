@@ -1,0 +1,30 @@
+enum ApiList {
+    Register = "/test/user/registration",
+    IsEmail = "/test/user/valid",
+    sendCode = "/test/user/sendCode",
+    login = "/test/user/login",
+    forgotPwd = "/test/user/forgotPwd",
+    changepassword = "/test/user/changePwd",
+    changePwd = "/test/user/changePwdSubmit",
+    check = "/test/user/checkLogin",
+    logout = "/test/user/logout",
+    relevance = "/test/interpretation/relevance",
+    variantId = "/test/interpretation/variant",
+    gene = "/test/interpretation/gene",
+    likeVariantId = "/test/interpretation/likeVariant",
+    likeGene = "/test/interpretation/likeGene",
+    pmidInfo = "/test/interpretation/pmid",
+    clzTable = "/test/interpretation/clztable",
+    updateEvidence = "/test/interpretation/updateEvidence",
+    deleteEvidence = "/test/interpretation/delEvidence",
+    pmidAndGeneData = "/test/multi/pmid",
+    submitStatus = "/test/interpretation/submit",
+    chatPaperData = "/test/paper/chat",
+    getSessionId = "/test/ws/id",
+    publicationList = "/test/publications/list",
+    publicationSearch = "/test/publications/search",
+    publicationUpdate = "/test/publications/update",
+    clinicalEvidence = "/test/clinvar/list"
+}
+
+export default ApiList;
