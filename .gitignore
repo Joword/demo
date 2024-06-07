@@ -38,3 +38,4 @@ bin/
 *.swp
 .idea
 .env
+node_modules

@@ -11,5 +11,8 @@
 ## Golang_vue
 概述：后端使用Go1.18+Gin+Gorm，前端使用Vite+Vue3，一个简单用户权限demo，后续再更新业务
 
+## Nuxt
+概述：node全栈起手式
+
 ## Drogon_vue（待续.....）
 概述：后端使用C++17 Drogon，前端使用Vite+Vue3，一个简单的全栈起手式demo
