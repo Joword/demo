@@ -1,9 +1,9 @@
 # Fullstack Demo
 `Author: Joword<joword@my.swjtu.edu.cn>`  
 **Self desc**:  
-Any branch on this repository is simplified from my work or open source project which I involved.<br>
-when I build the repository, which is convenient to my work or something I interested.<br>
-frankly, also hope to help anyone use the repository. 
+Any branch on this repository is simplified from my work or open source project which I involved.  
+Of the repository, it is convenient to my work or something I interested in.  
+Also, hope to help everyone. 
 ---
 ## springboot_vue
 **Desc**: based on an application demo  
