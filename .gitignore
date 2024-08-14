@@ -38,6 +38,8 @@ build/
 ### Mac OS ###
 .DS_Store
 
+.history
+
 # Logs
 /frontend/logs
 /frontend/*.log
