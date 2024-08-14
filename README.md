@@ -1,6 +1,7 @@
 # Fullstack Demo
-`Author: Joword<23089538@qq.com>`  
-**Self desc:** Any branch on this repository is simplified from my work or open source project which I involved.<br>
+`Author: Joword<joword@my.swjtu.edu.cn>`  
+**Self desc**:  
+Any branch on this repository is simplified from my work or open source project which I involved.<br>
 when I build the repository, which is convenient to my work or something I interested.<br>
 frankly, also hope to help anyone use the repository. 
 ---
