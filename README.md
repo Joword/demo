@@ -1,29 +1,34 @@
-### full stack developing app demo
+# Fullstack Demo
+`Author: Joword<23089538@qq.com>`  
+**Self desc:** Any branch on this repository is simplified from my work or open source project which I involved.<br>
+when I build the repository, which is convenient to my work or something I interested.<br>
+frankly, also hope to help anyone use the repository. 
+---
 ## springboot_vue
-desc: based on an application demo
-backend: Java8+Springboot2.7+mybatis plus+MySQL/Mongodb
-frontend: Vite+Vue3
+**Desc**: based on an application demo  
+**Backend**: Java8+Springboot2.7+mybatis plus+MySQL/Mongodb  
+**Frontend**: Vite+Vue3  
 
 
 ## springcloud_vue
-desc: based on a blockchain/supply chain demo
-backend: Java8+springcloud+mybatis plus+MySQL
-frontend: Vite+Vue3
+**Desc**: based on a blockchain/supply chain demo  
+**Backend**: Java8+springcloud+mybatis plus+MySQL   
+**Frontend**: Vite+Vue3  
 
 ## Fastapi_vue
-desc: based on an auto-interpretation demo
-backend: Python3.11+Fastapi+tortoise+mongodb
-frontend: Vite+Vue3
-update: add mail sending, redis config, websocket config, dispatcher, jwt, the captcha to login
+**Desc**: based on an auto-interpretation demo  
+**Backend**: Python3.11+Fastapi+tortoise+mongodb  
+**Frontend**: Vite+Vue3  
+**Update**: add mail sending, redis config, websocket config, dispatcher, jwt, the captcha to login  
 
 
 ## Goyang_vue
-desc: based on an auto-report demo
-backend: Goyang+Gin+Gorm
-frontend: Vite+Vue3(...)
+**Desc**: based on an auto-report demo  
+**Backend**: Goyang+Gin+Gorm  
+**Frontend**: Vite+Vue3(...)  
 
 ## Rust
-desc: based on a computer vision
-[github](https://github.com/Joword/demo-rust.git)
-backend: yolov8+axum+tokio+candle
-frontend: ...
+**Desc**: based on a computer vision  
+[github](https://github.com/Joword/demo-rust.git)  
+**Backend**: yolov8+axum+tokio+candle  
+**Frontend**: ...  
