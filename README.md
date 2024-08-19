@@ -15,6 +15,7 @@ Also, hope to help everyone.
 **Desc**: based on a blockchain/supply chain demo  
 **Backend**: Java8+springcloud+mybatis plus+MySQL   
 **Frontend**: Vite+Vue3  
+**Update**: update DAO and commons
 
 ## Fastapi_vue
 **Desc**: based on an auto-interpretation demo  
