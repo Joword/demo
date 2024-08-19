@@ -50,7 +50,9 @@ ribbon:
   ReadTimeout: 30000
   ConnectTimeout: 30000
 
-
+tenant:
+  username: Joword
+  password: joword
 
 
 

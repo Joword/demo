@@ -8,7 +8,6 @@
     </parent>
 
     <artifactId>demo-dao</artifactId>
-    <packaging>jar</packaging>
 
     <name>demo-dao</name>
     <url>http://maven.apache.org</url>
@@ -24,6 +23,10 @@
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
         </dependency>
     </dependencies>
 </project>
