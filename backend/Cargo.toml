@@ -1,0 +1,19 @@
+[package]
+name = "backend"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.75"
+publish = false
+authors = ["Joword"]
+readme = "../README.md"
+description = "a fast and easy-to-build prototype rust project"
+
+[source.crates-io]
+replace-with = "ustc"
+[source.ustc]
+registry = "git://mirrors.ustc.edu.cn/crates.io-index"
+
+[dependencies]
+tokio = { version = "1", features = ["full"] }
+axum = "0.7.5"
+serde = "1.0.24"
